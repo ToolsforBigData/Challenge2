@@ -1,5 +1,7 @@
 # Challenge2
-The second challenge in the class, on data from Reddit
+
+The second challenge in the class, on data from Reddit.
+
 The repository contains one .py file for each of the three parts of the challenge: 
 
 ### Ch2_Ex1.py - Which subreddits have the largest vocabulary?
