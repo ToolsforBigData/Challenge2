@@ -74,9 +74,9 @@ if __name__ == '__main__':
 		t1 = datetime.now()
 
 		# Start a multiprocess with 10 processes.
-		p = Pool(10)
+		p = Pool(4)
 		# Run the querying function on 10 processes
-		results = p.map(funQuery, topSubs)
+		results = p.map(funQuery, topSubs,chunksize=1)
 		# Set the time
 		t2 = datetime.now()
 
@@ -96,9 +96,9 @@ if __name__ == '__main__':
 		t3 = datetime.now()
 
 		#  Print the time for different function
-		print('Get Top Comment Subreddit time:{}'.format(t1-t0))
-		print('Query timer: {}'.format(t2-t1))
-		print('Set timer {}'.format(t3-t2))
+		#print('Get Top Comment Subreddit time:{}'.format(t1-t0))
+		#print('Query timer: {}'.format(t2-t1))
+		#print('Set timer {}'.format(t3-t2))
 
 		# Sort the unique pairs according to the number of common authors
 		sort_list =sorted(unqPairs, key=lambda x: x[2],reverse=True)
